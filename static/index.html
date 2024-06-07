@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Task Manager</h1>
+        <div id="auth">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p>Or <a href="#" onclick="showRegister()">Register</a></p>
+        </div>
+        <div id="register" style="display: none;">
+            <h2>Register</h2>
+            <input type="text" id="reg_username" placeholder="Username">
+            <input type="password" id="reg_password" placeholder="Password">
+            <button onclick="register()">Register</button>
+            <p>Or <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+        <div id="tasks" style="display: none;">
+            <h2>Your Tasks</h2>
+            <div id="task-list"></div>
+            <h3>Add New Task</h3>
+            <input type="text" id="task_title" placeholder="Task Title">
+            <input type="text" id="task_description" placeholder="Task Description">
+            <button onclick="createTask()">Add Task</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
